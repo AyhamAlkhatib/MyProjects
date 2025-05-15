@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+
+<body>
+    <h1>Sign In to Your Account</h1>
+    <p>Please enter your email and password to sign in.</p>
+
+    <form action="sign_in.php" method="post">
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <div>
+            <button type="submit">Sign In</button>
+        </div>
+
+        <div>
+            <p>Don't have an account? <a href="sign_up.html">Create one here</a>.</p>
+        </div>
+    </form>
+</body>
+
+</html>

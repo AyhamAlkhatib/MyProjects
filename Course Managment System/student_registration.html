@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+</head>
+
+<!-- TODO: Create Labels and add input fielsd and a button -->
+<body>
+    <h1>Student Registration</h1>
+    <form action="student_registration.php" method="post">
+
+        <label for="student_id">Student ID:</label>
+        <input type="text" name="student_id" id="student_id" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+
+        <label for="email">Retype Email:</label>
+        <input type="text" name="email" id="email" required><br><br>
+
+        <label for="class_standing">Standing:</label>
+        <select name="class_standing" id="class_standing">
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Master">Master</option>
+            <option value="PhD">PhD</option>
+        </select><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+
+</html>
