@@ -1,0 +1,3 @@
+This is an evil hangman game where user should choose a letter but I am forcing the computer to make the user choose the maximum amount of words possible. 
+
+This has been implemented through data structures like AVL tress, vectors, etc.
