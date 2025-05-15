@@ -1,0 +1,26 @@
+# PS7: Kronos Log Parsing
+
+## Description
+The program analyzes the Kronos InTouch time clock log by using regular expressions to parse the file. Reads the start time and its date and use another regual expression to check if the device boots completely. Message "oejs.AbstractConnector:Started SelectChannelConnector" should be in the file if the device boots and another startup message if not. If it boos succesfully, we print the end date and time nad the duration the device took to boot in milliseconds. If it doesn't boot completely then we print incomplete boot. 
+
+### Features
+The regular expression that I had to implement was very easy because it was given to us in the PDF. The hard part was how do I calculate the start and end time if the device boots completely and how do I extract the date and time from the sart and end time (Even when it fails, how do I extract the time from the start time) ? 
+    I used a for loop and put the date follwed by the time and I stored them in a string variable. Then I stord them in std::stringstream variable and created an input_facet. Then I imbue'd it and  used boost::posix_time::ptime to write it out to the file. I did the same for the end time. For calculating the time,  for calculating the time I converted the start and date/time in georgian date. I then created a  boost::posix_time::ptime(date, time) to get the time. I did the same for the end time and subtracted them and converted the solution to milliseconds. 
+### Approach
+I got the line of every file and checked if some of the words there match the regular expression of the startup message. If it does, I extracted the date, time, and line number and write it to the file. Then I would check if the line from the file has some words that match the regular expression. If it does, I would extract date, time, and line number and write it to the file. When there is a start and end, I would calculate the duration it took in the same procees described in "###Features". I would do that until the end of the file.
+
+### Regex
+I used 2 regular expressions:
+    (1) std::regex start("\\(log.c.166\\) server started").
+        It has the startup message, I would use regex_search(file_str, start). to check if some words in the line in the file matches the regex. (file_str is a line in the file because I use getline())
+    (2)  std::regex end("oejs.AbstractConnector:Started SelectChannelConnector")
+        It has the succesfull boot message.  I would use regex_search(file_str, start). to check if some words in the line in the file matches the regex.
+
+### Issues
+I believe everything is working correctly. 
+
+### Extra Credit
+No
+
+## Acknowledgements
+None
