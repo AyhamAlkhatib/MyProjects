@@ -1,0 +1,27 @@
+# PS3: N-Body Simulation
+
+
+
+
+## Description
+
+Project reads particles and radius and planets from a text file then calculate the netforce of all particles to calculate their new velocity and position. Then draw them to the window after each step() call until it reached a certain time limit.
+
+### Features
+Major decisions for PS3B, 1) in the step() since I want to know the state of each particle such as its velocity or position before going into the step() and changing velocity or position for each particle; i.e how do I store all particles such as when I compare the second particle with the first particle, the first particle has the velocity and position before modifying it in the step(). I created another vector of celastialbodies to store the old state before entering the step() and changing the original cleastialboies vector. 2) How do I make my code in step() cleaner ? I creeated two functions, one to calculate the netforce, other to calculate acceleration, new position, and new velocity.
+
+### Memory
+
+I stored celestial bodies as vectors of celestialbodies which automatically gets deleted after the program ends. Also, I used a smart pointer to keep track of the celestialBody that'll be used to calculate the netForce later as shown in the program. It was in block of code, when it exits that block, it gets automatically deleted.
+
+### Issues
+I had trouble with how to keep track of old positions and velocity before modifying them but I figured it out in the end. I believe everything is working correctly in my program.
+
+### Extra Credit
+No
+
+## Acknowledgements
+None
+
+## Changes
+I've corrected my problem from the original submission, the mistake was that I couldn't open the file and I fixed it to open via stdin. I also added a new universe file callled **asteroid.txt**. I made the other celestialBodies go around a ninja_squirrell. I also added a comet and an asteroid and if you looked at it closely and give thesimulation some time, you will find the comet and asteroid crashing into several planets as if if it hits them. Also, I made it that only these celestialbodies can crash into another celestialbodies. I added jupiter planet but that was far away so it can't be hit by asteroid and comet. I also added music; I used the already existed file that was provided for us by the professor **2001.wav**. I also showed the elapsed time. I got used a clock to getElapsed time. I created a Time variable to get the elapsed time in seconds. When seconds = 10, I restart the clock and created an lsec variable to represent the seconds in the left part and I would zero out the rsec part. When seconds is equal to 60 I incremented the rminute (which is the right side of the minute) by 1 and zero out the lsec and rsec.  
