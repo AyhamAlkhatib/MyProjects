@@ -1,0 +1,26 @@
+# PS1: LFSR / PhotoMagic
+
+## Description
+Take each pixel from cat.png and change its blue, red, and green color by calling generate(8) XORED with the specific color of the pixel to it and make it look noisy.
+
+### Features
+I extracted the the colors of the pixel by making a color variable and and accessing the pixel's color because it is efficient then called the generate(8) function to XOR the specific pixel color .  
+
+### Issues
+I believe everything is working
+
+### Tests
+1) Checking step() returns the correct int.
+2) Checking generate() if it returns the correct number which is 51
+3) Checking generate should be equal because they have smae sequence of bits. Sometimes for some reason the generate() doesn't return the correct int.
+4) Tests the step() that the whole string is equal to the other string after calling step() multiple times
+5) Testing my getStr() function is working correctly
+6) Checking generate shouldn't be equal because they have different sequence of bits
+
+
+### Extra Credit
+No
+
+## Acknowledgements
+None
+
