@@ -1,0 +1,34 @@
+# PS1: LFSR / PhotoMagic
+
+## Contact
+Name: Ayham Alkhatib
+
+Section: 202
+
+Time to Complete: total of 12 hours
+
+
+## Description
+Takes in a string and doing Xor operation with the tap bits and storing the result as the first bit, and shifting the other bits which will eliminate the last bit (Fib sequence of LFSR).
+
+### Features
+I used STL to store the bits in the vector because it has many functions like copying from vector to other and adding a new bit to the vector; the operation wasn't expensive. One very helpful feature is the use of iterators which can go at whichever index you like immediately.
+
+### Issues
+I believe everything is working correctly.
+
+### Tests
+1) Checking step() returns the correct int.
+2) Checking generate() if it returns the correct number which is 51
+3) Checking generate should be equal because they have smae sequence of bits. Sometimes for some reason the generate() doesn't return the correct int.
+4) Tests the step() that the whole string is equal to the other string after calling step() multiple times
+5) Testing my getStr() function is working correctly
+6) Checking generate shouldn't be equal because they have different sequence of bits
+
+### Extra Credit
+No
+
+## Acknowledgements
+None
+
+
