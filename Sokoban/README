@@ -1,0 +1,29 @@
+# PS4: Sokoban
+
+
+
+## Description
+The program is basically setting up the "Sokoban" game and drawing the blocks into their correct spaces so we can add the game mechanics next assignment
+### Features
+Major parts are: 
+    1) which kind of representation for my grid ? I
+        choose to do a matrix class and stored them in row-major order. 
+    2) How do I represnet it in my program ? 
+        I created its own .cpp and .hpp file and added a matrix object as a private member variable in the Sokoban class.
+    3) How do I tell my draw() in Sokoban class to draw the correct block such as a wall, player, etc. ? 
+        I made a switch-statement and I made a case for each symbol that is in the lvl file and did the necessary work to draw the block that represented that symbol for all symbols.
+
+### Memory
+I stored the matrix in a one dimentional array. I used the data[] to store the grid information and freed it right before the program ends using a destructor where Sokoban::game would call a function called freeMemory();moreover, the freeMemory() calls a destructor in the matrix class to free the memory of the Matrix private member variable in the Sokoban class.
+
+### Lambdas
+None
+
+### Issues
+I believe everything in my orogram is working correctly.
+
+### Extra Credit
+I showed the elapsed time. I got used a clock to getElapsed time. I created a Time variable to get the elapsed time in seconds. When seconds = 10, I restart the clock and created an lsec variable to represent the seconds in the left part and I would zero out the rsec part. When seconds is equal to 60 I incremented the rminute (which is the right side of the minute) by 1 and zero out the lsec and rsec.  
+
+## Acknowledgements
+None
