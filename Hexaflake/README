@@ -1,0 +1,17 @@
+# PS2: Hexaflake
+
+
+## Description
+It prints hexagons. Each hexaxon group has 6 hexagons around 1 hexagon (7 total). Also, amounts of hexagons we had to print depends on the depth
+
+### Features
+Major decisions were what to do in the base hexaflake() and how to implement. I decided that I will print the base hexagon and iteration 1 in that function and starting from 2 and above, it'll print the additional hexagons depending on the depth in the hexaHelper(). I decided to do it this way because I figured out that this is a good way to start from the base and then build up.
+### Issues
+I had trouble with how to implements a recursive function and I succedded in the most part. The part that doesn't work in my project is a small part and that is when I am printing 3 iterations or more, it doesn't print the middle hexagons/ 
+
+### Extra Credit
+No
+
+## Acknowledgements
+None
+
