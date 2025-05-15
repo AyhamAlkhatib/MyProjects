@@ -1,0 +1,25 @@
+# PS6: RandWriter
+
+## Description
+The project generates a random text based on kgram and order. For example, if kgram is "ab" then it checks what are the characters that comes after it and generate a random character based on their frequencies.
+### Features
+Major decision was which container do I store my markov model in. I choose an unordered_map with a string and another unordered_map with a char and int. (std::unordered_map<std::string, std::unordered_map<char, int>>) The string stores the kgram and the char stores the characters that followed the string and their number of occurances which is the int. That made it much easier for later use.
+
+### Testing
+1) I tested the orderK() if it returns the correct value and the textSize() if it returns the correct value. 
+2) I tested both frequency functions. For the first one, I checked that frequency returns the correct number of occurance given kgram ( which is "ab") and it does. For the Second one I checked the number of occurance of the character that follows the given kgram and it does return the correct value. I also checked the kgramSize() return the correct string length.
+3) I checked the krand() returns the only expected string (b always comes after a because in the string b always comes after a). 
+4)  Checked that generate() generates the expected string.
+5)  Checking that exceptions are thrown when they should be (when orderK has a weird k value and kgram.size() != orderK). I tested for all functions that should throw an exception.
+
+### Lambda
+I used it an algorithm std::find_if to go through the unordered_map and see if the kgram is in the unordered_map so if the kgram isn't in it. I would throw an exception.
+
+### Issues
+I believe everything is working correctly.
+
+### Extra Credit
+No
+
+## Acknowledgements
+None
