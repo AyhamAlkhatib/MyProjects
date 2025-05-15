@@ -1,0 +1,47 @@
+# PS5: DNA Alignment
+
+## Description
+Try to find the optimnal alignment with the lowest cost between 2 dna
+
+### Features
+I used a one vector of ints to store them as a mtrix. 
+
+### Issues
+There are 5 tests I am not passing on gradescope
+
+### Extra Credit
+None
+
+
+## Analysis
+
+### Example
+Do one additional test case by hand. It should be constructed in such a way that you know the correct  output before running your program on it, and it should be a "corner case" that helps check if your program handles all special situations correctly. 
+
+Please list:
+ - a copy of the test case input
+ - the expected test case output
+ - whether your program ran correctly on it or not
+ - optionally, any other remarks
+
+### Specs
+Your Computer
+Memory: 4GB
+Processors: arm64
+
+### Runs
+Fill in the table with the results of running your code on both your and your partner's computers.
+
+| data file     | distance | memory (mb) | time (seconds) | partner time |
+|---------------|----------|-------------|----------------|--------------|
+|ecoli2500.txt  |    134      |      94.3       |               0.862553           
+|ecoli5000.txt  |   176       |              |        95.4        |        3.42388       |
+|ecoli10000.txt |      241    |             |         96.5       |         13.7152      |
+|ecoli20000.txt |      3429    |             |           96.6     |            60.3444   |
+|ecoli28284.txt |       3679   |             |    97.2             |        115.553       |
+
+
+
+## Acknowledgements
+None
+
